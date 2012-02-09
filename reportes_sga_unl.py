@@ -1797,21 +1797,6 @@ for carrera in carreras:
     
     file.close()
 ################################################################################
-[10:13:25] patovala se une a la conversación
-
-[10:13:25] roto zalapeva dice:
-
-sabes que me pide el director financiero que necesita unos datos sobre la med
-
-[10:11:10] Jamil dice: 
-
-un reporte sobre los matriculados en los periodos marzo-julio 2010
-
-[10:11:20] Jamil dice: 
-
-y sept 2010 - feb 2011
-
-[10:11:34] Jamil dice: 
 
 cuantos matriculados y los costos ingresados por amtriculas
 ms = Matricula.query.filter(and_(Matricula.oferta_academica==oa,Matricula.papeleta != None,Matricula.tipo==None,or_(Matricula.estado == est_mat,Matricula.estado == est_apr,Matricula.estado == est_rep), Matricula.paralelo != None)).join(['modulo','carrera_programa','nivel']).filter(Nivel.area==area).distinct().all()
